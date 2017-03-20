@@ -24,3 +24,8 @@ The setup below is done on a Mac OS with Homebrew and pip installed.
 - if you don't want to export the chromedriver path on your local machine, you may add the code below to the top of `quick-tut.py` after the imports [reference doc](https://splinter.readthedocs.io/en/latest/drivers/chrome.html)
     - `executable_path = {'executable_path':' <put path to chromedriver here> '}`
     - `browser = Browser('chrome', **executable_path)`
+    
+## Setup Testing with Mozilla Firefox browser
+- for those who don't use Google Chrome and would like to use Mozilla Firefox for testing, it is as simple as following the steps above for a chromedriver but instead of using `browser = Browser('chrome')` in the `quick-tut.py` file, you just default to `browser = Browser()`
+- if you have taken out 'chrome' and run into the geckodriver error, you will also need to `brew install geckodriver`
+- now run the quick-tut file again and it should work fine
